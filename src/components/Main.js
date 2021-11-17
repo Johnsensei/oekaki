@@ -2,7 +2,7 @@ import React, { useEffect, useRef, Fragment, useCallback, useState} from 'react'
 import { render } from 'react-dom';
 import Pressure from 'pressure';
 import { useSvgDrawing } from 'react-hooks-svgdrawing';
-import { GithubPicker, SketchPicker, CustomPicker } from 'react-color';
+import { GithubPicker, CustomPicker } from 'react-color';
 
 const getRandomInt = (max) =>
   Math.floor(Math.random() * Math.floor(max));
@@ -68,9 +68,6 @@ function Main() {
     [setPenThinnerWidth]
   )
 
-  var { Checkboard } = require('react-color/lib/components/common');
-
-
   useEffect(() => {
     if (penMode === 'normal') return
 
@@ -81,7 +78,7 @@ function Main() {
       if (penMode === 'random') {
         changePenWidth(getRandomInt(50) + 5)
       }
-      if (penMode == 'thinner') {
+      if (penMode === 'thinner') {
         changePenWidth(penThinnerWidth)
       }
     }, (instance && instance.delay) || 20)
@@ -99,40 +96,40 @@ function Main() {
   return (
     <Fragment>
 
-     
-        {/* Draw Pad
-        TODO: Move to own component.
-        Will be difficult given how the functions are all grouped together.
-        */}
-        <div style={{display: 'flex'}}>
-          <div
+        <div style={{display: 'flex', alignItems: 'center', height: '100vh', backgroundColor: 'blue'}}>
+
+            {/* Draw Pad */}
+            <div
             ref={divRef}
             style={{
-              // Scaling/Responsiveness is really going to be a challenge.
-              width: 500,
-              height: 500,
-              border: '1px solid #eee',
-              margin: 'auto'
+                width: 500,
+                height: 500,
+                border: '1px solid #eee',
+                margin: 'auto',
+                backgroundColor: '#fff'
             }}
             onTouchEnd={handleChangeXML}
             onMouseLeave={handleChangeXML}
-          />
+            />
 
-
-            <div>
+            {/* Buttons */}
+            <div style={{margin: 'auto', backgroundColor: 'red'}}>
                 <button onClick={() => changePenWidth(2)}>2</button>
                 <button onClick={() => changePenWidth(5)}>5</button>
                 <button onClick={() => changePenWidth(10)}>10</button>
+
                 <GithubPicker
                     width={'50px'}
                     triangle={'hide'}
-                    colors={['#FFFFFF', '#000000',
-                                '#3FF913', '#FE2B01',
-                                '#F03EFE', '#2A2EFE',
-                                '#FF8B00', '#FCFC0A'
+                    colors={[
+                            '#FFFFFF', '#000000',
+                            '#3FF913', '#FE2B01',
+                            '#F03EFE', '#2A2EFE',
+                            '#FF8B00', '#FCFC0A'
                             ]}
                     onChangeComplete={(color) => changePenColor(color.hex)}
                 />
+
                 <div style={{width: 100}}>
                     <button onClick={undo}>Undo</button>
                     <button onClick={clear}>Clear</button>
@@ -140,17 +137,9 @@ function Main() {
                     <button onClick={handleClickDownload('png')}>Download PNG</button>
                     <button onClick={handleClickDownload('jpg')}>Download JPG</button>
                 </div>
+
             </div>
 
-          {/* Control Buttons
-            TODO: Move to preferred area of the screen.
-            TODO: Can be moved to own component.
-          */}
-          <div>
-            
-            
-
-          </div>
         </div>
 
     </Fragment>
