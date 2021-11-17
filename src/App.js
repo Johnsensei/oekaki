@@ -156,6 +156,7 @@ function App() {
           <div
             ref={divRef}
             style={{
+              // TODO: Make the width and height responsive, not hard coded.
               width: 500,
               height: 500,
               border: '1px solid #eee',
@@ -170,13 +171,15 @@ function App() {
           <button onClick={handleClickDownload('png')}>Download PNG</button>
           <button onClick={handleClickDownload('jpg')}>Download JPG</button>
         </div>
-        <div
+        {/* <div
           style={{
             fontSize: '8px'
           }}
         >
           {xml}
-        </div>
+          TODO: Can we remove variables and functions associated with this?
+          Or will that break the ability to save SVG?
+        </div> */}
       </div>
     </Fragment>
   );
