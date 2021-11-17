@@ -33,6 +33,7 @@ function App() {
   const [penMode, setPenMode] = useState('normal')
   const [penWidth, setPenWidth] = useState(5)
   const [penThinnerWidth, setPenThinnerWidth] = useState(0)
+
   const handleColor = useCallback(() => {
     changePenColor(getRandomColor())
   }, [changePenColor])
@@ -193,6 +194,14 @@ Keeping for now in case we use as some sort of container.
           <button onClick={() => changePenWidth(2)}>2</button>
           <button onClick={() => changePenWidth(5)}>5</button>
           <button onClick={() => changePenWidth(10)}>10</button>
+          <button onClick={() => changePenColor('white')}>White</button>
+          <button onClick={() => changePenColor('black')}>Black</button>
+          <button onClick={() => changePenColor('green')}>Green</button>
+          <button onClick={() => changePenColor('red')}>Red</button>
+          <button onClick={() => changePenColor('purple')}>Purple</button>
+          <button onClick={() => changePenColor('blue')}>Blue</button>
+          <button onClick={() => changePenColor('orange')}>Orange</button>
+          <button onClick={() => changePenColor('yellow')}>Yellow</button>
 
         </div>
 
