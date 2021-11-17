@@ -26,12 +26,12 @@ function App() {
       clear
     }
   ] = useSvgDrawing({
-    penWidth: 3,
+    penWidth: 2,
     penColor: '#000'
   })
   const [xml, setXml] = useState('')
   const [penMode, setPenMode] = useState('normal')
-  const [penWidth, setPenWidth] = useState(5)
+  const [penWidth, setPenWidth] = useState(2)
   const [penThinnerWidth, setPenThinnerWidth] = useState(0)
 
   const handleColor = useCallback(() => {
@@ -96,10 +96,10 @@ function App() {
     <Fragment>
 
       {/* Pen Options
-        TODO: Remove rainbow and random width options.
-        Just have three selectable sizes: 2, 5, 10.
+        TODO: Can likely remove this whole fieldset.
+        We're going to control pen size and color from our own menu.
       */}
-      <fieldset>
+      {/* <fieldset>
 
         <label>
           <input
@@ -153,7 +153,7 @@ function App() {
         {penMode !== 'rainbow' && (
           <button onClick={handleColor}>Change Color</button>
         )}
-      </fieldset>
+      </fieldset> */}
 
       {/* <div
 TODO: Can most likely remove this div altogether.
@@ -172,7 +172,7 @@ Keeping for now in case we use as some sort of container.
           <div
             ref={divRef}
             style={{
-              // TODO: Make the width and height responsive, not hard coded.
+              // Scaling/Responsiveness is really going to be a challenge.
               width: 500,
               height: 500,
               border: '1px solid #eee',

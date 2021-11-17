@@ -3,13 +3,12 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import { CanvasProvider } from "./CanvasContext";
 
 ReactDOM.render(
   <React.StrictMode>
-    <CanvasProvider>  
+      
       <App />
-    </CanvasProvider>
+    
   </React.StrictMode>,
   document.getElementById('root')
 );
