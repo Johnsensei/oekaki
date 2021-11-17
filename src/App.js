@@ -93,7 +93,13 @@ function App() {
 
   return (
     <Fragment>
+
+      {/* Pen Options
+        TODO: Remove rainbow and random width options.
+        Just have three selectable sizes: 2, 5, 10.
+      */}
       <fieldset>
+
         <label>
           <input
             type="checkbox"
@@ -103,6 +109,7 @@ function App() {
           />
           Normal pen.
         </label>
+
         <label>
           <input
             type="checkbox"
@@ -146,12 +153,20 @@ function App() {
           <button onClick={handleColor}>Change Color</button>
         )}
       </fieldset>
-      <div
+
+      {/* <div
+TODO: Can most likely remove this div altogether.
+Keeping for now in case we use as some sort of container.
         style={{
           display: 'flex',
           justifyContent: 'flexWrap'
         }}
-      >
+      > */}
+
+        {/* Draw Pad
+        TODO: Move to own component.
+        Will be difficult given how the functions are all grouped together.
+        */}
         <div>
           <div
             ref={divRef}
@@ -165,22 +180,34 @@ function App() {
             onTouchEnd={handleChangeXML}
             onMouseLeave={handleChangeXML}
           />
+
+          {/* Control Buttons
+            Move to preferred area of the screen.
+            TODO: Can be moved to own component.
+          */}
           <button onClick={undo}>Undo</button>
           <button onClick={clear}>Clear</button>
           <button onClick={handleClickDownload('svg')}>Download SVG</button>
           <button onClick={handleClickDownload('png')}>Download PNG</button>
           <button onClick={handleClickDownload('jpg')}>Download JPG</button>
+          <button onClick={() => changePenWidth(2)}>2</button>
+          <button onClick={() => changePenWidth(5)}>5</button>
+          <button onClick={() => changePenWidth(10)}>10</button>
+
         </div>
+
         {/* <div
           style={{
             fontSize: '8px'
           }}
         >
           {xml}
-          TODO: Can we remove variables and functions associated with this?
-          Or will that break the ability to save SVG?
+TODO: Can we remove variables and functions associated with this?
+Or will that break the ability to save SVG?
         </div> */}
-      </div>
+
+      {/* </div> */}
+
     </Fragment>
   );
 }
