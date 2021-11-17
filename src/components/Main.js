@@ -104,7 +104,7 @@ function Main() {
         TODO: Move to own component.
         Will be difficult given how the functions are all grouped together.
         */}
-        <div >
+        <div style={{display: 'flex'}}>
           <div
             ref={divRef}
             style={{
@@ -120,6 +120,9 @@ function Main() {
 
 
             <div>
+                <button onClick={() => changePenWidth(2)}>2</button>
+                <button onClick={() => changePenWidth(5)}>5</button>
+                <button onClick={() => changePenWidth(10)}>10</button>
                 <GithubPicker
                     width={'50px'}
                     triangle={'hide'}
@@ -130,29 +133,24 @@ function Main() {
                             ]}
                     onChangeComplete={(color) => changePenColor(color.hex)}
                 />
+                <div style={{width: 100}}>
+                    <button onClick={undo}>Undo</button>
+                    <button onClick={clear}>Clear</button>
+                    <button onClick={handleClickDownload('svg')}>Download SVG</button>
+                    <button onClick={handleClickDownload('png')}>Download PNG</button>
+                    <button onClick={handleClickDownload('jpg')}>Download JPG</button>
+                </div>
             </div>
 
           {/* Control Buttons
-            Move to preferred area of the screen.
+            TODO: Move to preferred area of the screen.
             TODO: Can be moved to own component.
           */}
-          <button onClick={undo}>Undo</button>
-          <button onClick={clear}>Clear</button>
-          <button onClick={handleClickDownload('svg')}>Download SVG</button>
-          <button onClick={handleClickDownload('png')}>Download PNG</button>
-          <button onClick={handleClickDownload('jpg')}>Download JPG</button>
-          <button onClick={() => changePenWidth(2)}>2</button>
-          <button onClick={() => changePenWidth(5)}>5</button>
-          <button onClick={() => changePenWidth(10)}>10</button>
-          <button onClick={() => changePenColor('white')}>White</button>
-          <button onClick={() => changePenColor('black')}>Black</button>
-          <button onClick={() => changePenColor('green')}>Green</button>
-          <button onClick={() => changePenColor('red')}>Red</button>
-          <button onClick={() => changePenColor('purple')}>Purple</button>
-          <button onClick={() => changePenColor('blue')}>Blue</button>
-          <button onClick={() => changePenColor('orange')}>Orange</button>
-          <button onClick={() => changePenColor('yellow')}>Yellow</button>
+          <div>
+            
+            
 
+          </div>
         </div>
 
     </Fragment>
