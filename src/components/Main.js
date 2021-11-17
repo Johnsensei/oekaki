@@ -128,6 +128,7 @@ function Main() {
                                 '#F03EFE', '#2A2EFE',
                                 '#FF8B00', '#FCFC0A'
                             ]}
+                    onChangeComplete={(color) => changePenColor(color.hex)}
                 />
             </div>
 
@@ -153,20 +154,6 @@ function Main() {
           <button onClick={() => changePenColor('yellow')}>Yellow</button>
 
         </div>
-
-        
-
-        {/* <div
-          style={{
-            fontSize: '8px'
-          }}
-        >
-          {xml}
-TODO: Can we remove variables and functions associated with this?
-Or will that break the ability to save SVG?
-        </div> */}
-
-      {/* </div> */}
 
     </Fragment>
   );
