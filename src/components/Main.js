@@ -2,6 +2,7 @@ import React, { useEffect, useRef, Fragment, useCallback, useState} from 'react'
 import { render } from 'react-dom';
 import Pressure from 'pressure';
 import { useSvgDrawing } from 'react-hooks-svgdrawing';
+import { GithubPicker, SketchPicker, CustomPicker } from 'react-color';
 
 const getRandomInt = (max) =>
   Math.floor(Math.random() * Math.floor(max));
@@ -67,6 +68,9 @@ function Main() {
     [setPenThinnerWidth]
   )
 
+  var { Checkboard } = require('react-color/lib/components/common');
+
+
   useEffect(() => {
     if (penMode === 'normal') return
 
@@ -95,80 +99,12 @@ function Main() {
   return (
     <Fragment>
 
-      {/* Pen Options
-        TODO: Can likely remove this whole fieldset.
-        We're going to control pen size and color from our own menu.
-      */}
-      {/* <fieldset>
-
-        <label>
-          <input
-            type="checkbox"
-            checked={penMode === 'normal'}
-            value="normal"
-            onChange={handleChangeMode}
-          />
-          Normal pen.
-        </label>
-
-        <label>
-          <input
-            type="checkbox"
-            checked={penMode === 'thinner'}
-            value="thinner"
-            onChange={handleChangeMode}
-          />
-          Pen becoming thinner.
-        </label>
-        <label>
-          <input
-            type="checkbox"
-            checked={penMode === 'random'}
-            value="random"
-            onChange={handleChangeMode}
-          />
-          Pen becoming Random Width.
-        </label>
-        <label>
-          <input
-            type="checkbox"
-            checked={penMode === 'rainbow'}
-            value="rainbow"
-            onChange={handleChangeMode}
-          />
-          Rainbow pen.
-        </label>
-        {['normal', 'rainbow'].includes(penMode) && (
-          <div>
-            pen width
-            <input
-              type="range"
-              value={penWidth}
-              min={1}
-              max={50}
-              onChange={handlePenWidth}
-            />
-          </div>
-        )}
-        {penMode !== 'rainbow' && (
-          <button onClick={handleColor}>Change Color</button>
-        )}
-      </fieldset> */}
-
-      {/* <div
-TODO: Can most likely remove this div altogether.
-Keeping for now in case we use as some sort of container.
-        style={{
-          display: 'flex',
-          justifyContent: 'flexWrap'
-        }}
-      > */}
-
+     
         {/* Draw Pad
         TODO: Move to own component.
         Will be difficult given how the functions are all grouped together.
         */}
-        <div>
+        <div >
           <div
             ref={divRef}
             style={{
@@ -181,6 +117,19 @@ Keeping for now in case we use as some sort of container.
             onTouchEnd={handleChangeXML}
             onMouseLeave={handleChangeXML}
           />
+
+
+            <div>
+                <GithubPicker
+                    width={'50px'}
+                    triangle={'hide'}
+                    colors={['#FFFFFF', '#000000',
+                                '#3FF913', '#FE2B01',
+                                '#F03EFE', '#2A2EFE',
+                                '#FF8B00', '#FCFC0A'
+                            ]}
+                />
+            </div>
 
           {/* Control Buttons
             Move to preferred area of the screen.
@@ -204,6 +153,8 @@ Keeping for now in case we use as some sort of container.
           <button onClick={() => changePenColor('yellow')}>Yellow</button>
 
         </div>
+
+        
 
         {/* <div
           style={{
