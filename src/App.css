@@ -53,6 +53,7 @@
 }
 
 .side-buttons-container {
+  /* TODO: How to make the height equal to the height of all the children combined? */
   height: 325px;
 
   margin-top: 5vh;

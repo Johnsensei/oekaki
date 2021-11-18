@@ -83,7 +83,6 @@ function Main() {
 
             {/* Image Color Buttons */}
             <div style={{width: 96}}>
-
                 <img src={White} alt='white' className='color-button' onClick={() => changePenColor('#FFFFFF')}/>
                 <img src={Black} alt='black' className='color-button' onClick={() => changePenColor('#000000')}/>
                 <img src={Green} alt='green' className='color-button' onClick={() => changePenColor('#3FF913')}/>
@@ -91,8 +90,7 @@ function Main() {
                 <img src={Purple} alt='purple' className='color-button' onClick={() => changePenColor('#F03EFE')}/>
                 <img src={Blue} alt='blue' className='color-button' onClick={() => changePenColor('#2A2EFE')}/>
                 <img src={Orange} alt='orange' className='color-button' onClick={() => changePenColor('#FF8B00')}/>
-                <img src={Yellow} alt='yellow' className='color-button' onClick={() => changePenColor('#FCFC0A')}/>
-              
+                <img src={Yellow} alt='yellow' className='color-button' onClick={() => changePenColor('#FCFC0A')}/> 
             </div>
 
             {/* Action Buttons */}
