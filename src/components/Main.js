@@ -69,7 +69,7 @@ function Main() {
         style={{
             width: 500,
             height: 500,
-            border: '1px solid #eee',
+            border: '1px solid #ccc',
             marginTop: '5vh',
             backgroundColor: '#fff'
         }}
