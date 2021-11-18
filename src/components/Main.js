@@ -88,16 +88,16 @@ function Main() {
 
             {/* Image Color Buttons */}
             <div style={{width: 96}}>
-              {/* <button style={{width: 48, height: 48}}> */}
-                <img src={White} alt='white' style={{width: 48, height: 48, marginBottom: 0}} onClick={() => changePenColor('#FFFFFF')}/>
-                <img src={Black} alt='black' style={{width: 48, height: 48, margin: 0}} onClick={() => changePenColor('#000000')}/>
-                <img src={Green} alt='green' style={{width: 48, height: 48}} onClick={() => changePenColor('#3FF913')}/>
-                <img src={Red} alt='red' style={{width: 48, height: 48}} onClick={() => changePenColor('#FE2B01')}/>
-                <img src={Purple} alt='purple' style={{width: 48, height: 48}} onClick={() => changePenColor('#F03EFE')}/>
-                <img src={Blue} alt='blue' style={{width: 48, height: 48}} onClick={() => changePenColor('#2A2EFE')}/>
-                <img src={Orange} alt='orange' style={{width: 48, height: 48}} onClick={() => changePenColor('#FF8B00')}/>
-                <img src={Yellow} alt='yellow' style={{width: 48, height: 48}} onClick={() => changePenColor('#FCFC0A')}/>
-              {/* </button> */}
+
+                <img src={White} alt='white' style={{width: 48, height: 48, verticalAlign: 'bottom'}} onClick={() => changePenColor('#FFFFFF')}/>
+                <img src={Black} alt='black' style={{width: 48, height: 48, verticalAlign: 'bottom'}} onClick={() => changePenColor('#000000')}/>
+                <img src={Green} alt='green' style={{width: 48, height: 48, verticalAlign: 'bottom'}} onClick={() => changePenColor('#3FF913')}/>
+                <img src={Red} alt='red' style={{width: 48, height: 48, verticalAlign: 'bottom'}} onClick={() => changePenColor('#FE2B01')}/>
+                <img src={Purple} alt='purple' style={{width: 48, height: 48, verticalAlign: 'bottom'}} onClick={() => changePenColor('#F03EFE')}/>
+                <img src={Blue} alt='blue' style={{width: 48, height: 48, verticalAlign: 'bottom'}} onClick={() => changePenColor('#2A2EFE')}/>
+                <img src={Orange} alt='orange' style={{width: 48, height: 48, verticalAlign: 'bottom'}} onClick={() => changePenColor('#FF8B00')}/>
+                <img src={Yellow} alt='yellow' style={{width: 48, height: 48, verticalAlign: 'bottom'}} onClick={() => changePenColor('#FCFC0A')}/>
+              
             </div>
 
             <div style={{width: 100}}>
