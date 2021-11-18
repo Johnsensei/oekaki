@@ -104,14 +104,14 @@ function Main() {
 
             {/* Circle Color Buttons */}
             <div style={{width: 96}}>
-                <img src={WhiteCircle} alt='white' className='color-button' onClick={() => changePenColor('#FFFFFF')}/>
                 <img src={BlackCircle} alt='black' className='color-button' onClick={() => changePenColor('#000000')}/>
-                <img src={GreenCircle} alt='green' className='color-button' onClick={() => changePenColor('#3FF913')}/>
+                <img src={WhiteCircle} alt='white' className='color-button' onClick={() => changePenColor('#FFFFFF')}/>
                 <img src={RedCircle} alt='red' className='color-button' onClick={() => changePenColor('#FE2B01')}/>
-                <img src={PurpleCircle} alt='purple' className='color-button' onClick={() => changePenColor('#F03EFE')}/>
+                <img src={GreenCircle} alt='green' className='color-button' onClick={() => changePenColor('#3FF913')}/>
+                <img src={YellowCircle} alt='yellow' className='color-button' onClick={() => changePenColor('#FCFC0A')}/>
                 <img src={BlueCircle} alt='blue' className='color-button' onClick={() => changePenColor('#2A2EFE')}/>
                 <img src={OrangeCircle} alt='orange' className='color-button' onClick={() => changePenColor('#FF8B00')}/>
-                <img src={YellowCircle} alt='yellow' className='color-button' onClick={() => changePenColor('#FCFC0A')}/> 
+                <img src={PurpleCircle} alt='purple' className='color-button' onClick={() => changePenColor('#F03EFE')}/>
             </div>
 
             {/* Action Buttons */}

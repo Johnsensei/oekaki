@@ -42,6 +42,7 @@
   flex-direction: row;
   justify-content: center;
   height: 100vh;
+  background-color: #000;
 }
 
 .draw-pad {
@@ -50,6 +51,7 @@
   border: 1px solid #ccc;
   margin-top: 5vh;
   background-color: #fff;
+  border-radius: 12px;
 }
 
 .side-buttons-container {
