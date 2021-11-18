@@ -1,4 +1,5 @@
 import React, { useEffect, useCallback, useState} from 'react';
+import '../App.css'
 import Pressure from 'pressure';
 import { useSvgDrawing } from 'react-hooks-svgdrawing';
 // May still use the CustomPicker instead of the GithubPicker.
@@ -52,7 +53,7 @@ function Main() {
 
   return (
     
-    <div style={{display: 'flex', alignItems: 'center', height: '100vh', backgroundColor: 'blue'}}>
+    <div style={{display: 'flex', flexDirection: 'row', justifyContent: 'center', height: '100vh', backgroundColor: 'blue'}}>
 
         {/* Draw Pad */}
         <div
@@ -61,7 +62,7 @@ function Main() {
             width: 500,
             height: 500,
             border: '1px solid #eee',
-            margin: 'auto',
+            marginTop: '5vh',
             backgroundColor: '#fff'
         }}
         onTouchEnd={handleChangeXML}
@@ -69,24 +70,29 @@ function Main() {
         />
 
         {/* Buttons */}
-        <div style={{margin: 'auto', backgroundColor: 'red'}}>
-            <button onClick={() => changePenWidth(2)}>2</button>
-            <button onClick={() => changePenWidth(5)}>5</button>
-            <button onClick={() => changePenWidth(10)}>10</button>
+        <div style={{backgroundColor: 'red', height: 262, marginTop: '5vh', marginLeft: 5}}>
 
-            <GithubPicker
-                width={'50px'}
-                triangle={'hide'}
-                colors={[
-                        '#FFFFFF', '#000000',
-                        '#3FF913', '#FE2B01',
-                        '#F03EFE', '#2A2EFE',
-                        '#FF8B00', '#FCFC0A'
-                        ]}
-                onChangeComplete={(color) => changePenColor(color.hex)}
-            />
+            <div style={{backgroundColor: 'yellow'}}>
+                <button onClick={() => changePenWidth(2)}>2</button>
+                <button onClick={() => changePenWidth(5)}>5</button>
+                <button onClick={() => changePenWidth(10)}>10</button>
+            </div>
 
-            <div style={{width: 100}}>
+            <div style={{backgroundColor: 'teal'}}>
+                <GithubPicker
+                    width={'50px'}
+                    triangle={'hide'}
+                    colors={[
+                            '#FFFFFF', '#000000',
+                            '#3FF913', '#FE2B01',
+                            '#F03EFE', '#2A2EFE',
+                            '#FF8B00', '#FCFC0A'
+                            ]}
+                    onChangeComplete={(color) => changePenColor(color.hex)}
+                />
+            </div>
+
+            <div style={{width: 100, backgroundColor: 'purple'}}>
                 <button onClick={undo}>Undo</button>
                 <button onClick={clear}>Clear</button>
                 <button onClick={handleClickDownload('svg')}>Download SVG</button>
