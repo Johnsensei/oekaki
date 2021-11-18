@@ -51,7 +51,7 @@
   border: 1px solid #ccc;
   margin-top: 5vh;
   background-color: #fff;
-  border-radius: 12px;
+  /* border-radius: 12px; */
 }
 
 .side-buttons-container {
@@ -67,4 +67,24 @@
   width: 48px;
   height: 48px;
   vertical-align: bottom;
+  
+}
+
+.color-button[push='1'] {
+  animation: push 200ms 1;
+}
+
+@keyframes push {
+  25% {
+    transform:scale(0.95);
+  }
+  50% {
+    transform:scale(0.90);
+  }
+  75% {
+    transform:scale(0.85);
+  }
+  100% {
+    transform:scale(0.80);
+  }
 }
