@@ -37,8 +37,31 @@
   }
 }
 
+.main-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  height: 100vh;
+}
+
+.draw-pad {
+  width: 500px;
+  height: 500px;
+  border: 1px solid #ccc;
+  margin-top: 5vh;
+  background-color: #fff;
+}
+
+.side-buttons-container {
+  height: 325px;
+
+  margin-top: 5vh;
+  margin-left: 5px;
+  /* background-color: #FF0000; */
+}
+
 .color-button {
-  width: 48;
-  height: 48;
-  vertical-align: bottom
+  width: 48px;
+  height: 48px;
+  vertical-align: bottom;
 }

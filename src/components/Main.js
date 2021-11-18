@@ -61,51 +61,47 @@ function Main() {
 
   return (
     
-    <div style={{display: 'flex', flexDirection: 'row', justifyContent: 'center', height: '100vh'}}>
+    <div className='main-container'>
 
         {/* Draw Pad */}
         <div
+        className='draw-pad'
         ref={divRef}
-        style={{
-            width: 500,
-            height: 500,
-            border: '1px solid #ccc',
-            marginTop: '5vh',
-            backgroundColor: '#fff'
-        }}
         onTouchEnd={handleChangeXML}
         onMouseLeave={handleChangeXML}
         />
 
         {/* Buttons */}
-        <div style={{ height: 262, marginTop: '5vh', marginLeft: 5}}>
+        <div className='side-buttons-container'>
 
-            <div style={{}}>
-                <button onClick={() => changePenWidth(2)}>2</button>
-                <button onClick={() => changePenWidth(5)}>5</button>
-                <button onClick={() => changePenWidth(10)}>10</button>
+            {/* Pen Width Buttons */}
+            <div >
+                <button style={{width: 32}} onClick={() => changePenWidth(2)}>2</button>
+                <button style={{width: 32}} onClick={() => changePenWidth(5)}>5</button>
+                <button style={{width: 32}} onClick={() => changePenWidth(10)}>10</button>
             </div>
 
             {/* Image Color Buttons */}
             <div style={{width: 96}}>
 
-                <img src={White} alt='white' style={{width: 48, height: 48, verticalAlign: 'bottom'}} onClick={() => changePenColor('#FFFFFF')}/>
-                <img src={Black} alt='black' style={{width: 48, height: 48, verticalAlign: 'bottom'}} onClick={() => changePenColor('#000000')}/>
-                <img src={Green} alt='green' style={{width: 48, height: 48, verticalAlign: 'bottom'}} onClick={() => changePenColor('#3FF913')}/>
-                <img src={Red} alt='red' style={{width: 48, height: 48, verticalAlign: 'bottom'}} onClick={() => changePenColor('#FE2B01')}/>
-                <img src={Purple} alt='purple' style={{width: 48, height: 48, verticalAlign: 'bottom'}} onClick={() => changePenColor('#F03EFE')}/>
-                <img src={Blue} alt='blue' style={{width: 48, height: 48, verticalAlign: 'bottom'}} onClick={() => changePenColor('#2A2EFE')}/>
-                <img src={Orange} alt='orange' style={{width: 48, height: 48, verticalAlign: 'bottom'}} onClick={() => changePenColor('#FF8B00')}/>
-                <img src={Yellow} alt='yellow' style={{width: 48, height: 48, verticalAlign: 'bottom'}} onClick={() => changePenColor('#FCFC0A')}/>
+                <img src={White} alt='white' className='color-button' onClick={() => changePenColor('#FFFFFF')}/>
+                <img src={Black} alt='black' className='color-button' onClick={() => changePenColor('#000000')}/>
+                <img src={Green} alt='green' className='color-button' onClick={() => changePenColor('#3FF913')}/>
+                <img src={Red} alt='red' className='color-button' onClick={() => changePenColor('#FE2B01')}/>
+                <img src={Purple} alt='purple' className='color-button' onClick={() => changePenColor('#F03EFE')}/>
+                <img src={Blue} alt='blue' className='color-button' onClick={() => changePenColor('#2A2EFE')}/>
+                <img src={Orange} alt='orange' className='color-button' onClick={() => changePenColor('#FF8B00')}/>
+                <img src={Yellow} alt='yellow' className='color-button' onClick={() => changePenColor('#FCFC0A')}/>
               
             </div>
 
-            <div style={{width: 100}}>
-                <button onClick={undo}>Undo</button>
-                <button onClick={clear}>Clear</button>
-                <button onClick={handleClickDownload('svg')}>Download SVG</button>
-                <button onClick={handleClickDownload('png')}>Download PNG</button>
-                <button onClick={handleClickDownload('jpg')}>Download JPG</button>
+            {/* Action Buttons */}
+            <div style={{width: 96}}>
+                <button style={{width: 96}} onClick={undo}>Undo</button>
+                <button style={{width: 96}} onClick={clear}>Clear</button>
+                <button style={{width: 96}} onClick={handleClickDownload('svg')}>Download SVG</button>
+                <button style={{width: 96}} onClick={handleClickDownload('png')}>Download PNG</button>
+                <button style={{width: 96}} onClick={handleClickDownload('jpg')}>Download JPG</button>
             </div>
 
         </div>
