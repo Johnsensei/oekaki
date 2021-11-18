@@ -13,6 +13,15 @@ import Blue from '../img/blue.png';
 import Orange from '../img/orange.png';
 import Yellow from '../img/yellow.png';
 
+import WhiteCircle from '../img/white-circle.png';
+import BlackCircle from '../img/black-circle.png';
+import GreenCircle from '../img/green-circle.png';
+import RedCircle from '../img/red-circle.png';
+import PurpleCircle from '../img/purple-circle.png';
+import BlueCircle from '../img/blue-circle.png';
+import OrangeCircle from '../img/orange-circle.png';
+import YellowCircle from '../img/yellow-circle.png';
+
 function Main() {
 
   const [
@@ -82,7 +91,7 @@ function Main() {
             </div>
 
             {/* Image Color Buttons */}
-            <div style={{width: 96}}>
+            {/* <div style={{width: 96}}>
                 <img src={White} alt='white' className='color-button' onClick={() => changePenColor('#FFFFFF')}/>
                 <img src={Black} alt='black' className='color-button' onClick={() => changePenColor('#000000')}/>
                 <img src={Green} alt='green' className='color-button' onClick={() => changePenColor('#3FF913')}/>
@@ -91,16 +100,30 @@ function Main() {
                 <img src={Blue} alt='blue' className='color-button' onClick={() => changePenColor('#2A2EFE')}/>
                 <img src={Orange} alt='orange' className='color-button' onClick={() => changePenColor('#FF8B00')}/>
                 <img src={Yellow} alt='yellow' className='color-button' onClick={() => changePenColor('#FCFC0A')}/> 
+            </div> */}
+
+            {/* Circle Color Buttons */}
+            <div style={{width: 96}}>
+                <img src={WhiteCircle} alt='white' className='color-button' onClick={() => changePenColor('#FFFFFF')}/>
+                <img src={BlackCircle} alt='black' className='color-button' onClick={() => changePenColor('#000000')}/>
+                <img src={GreenCircle} alt='green' className='color-button' onClick={() => changePenColor('#3FF913')}/>
+                <img src={RedCircle} alt='red' className='color-button' onClick={() => changePenColor('#FE2B01')}/>
+                <img src={PurpleCircle} alt='purple' className='color-button' onClick={() => changePenColor('#F03EFE')}/>
+                <img src={BlueCircle} alt='blue' className='color-button' onClick={() => changePenColor('#2A2EFE')}/>
+                <img src={OrangeCircle} alt='orange' className='color-button' onClick={() => changePenColor('#FF8B00')}/>
+                <img src={YellowCircle} alt='yellow' className='color-button' onClick={() => changePenColor('#FCFC0A')}/> 
             </div>
 
             {/* Action Buttons */}
             <div style={{width: 96}}>
                 <button style={{width: 96}} onClick={undo}>Undo</button>
                 <button style={{width: 96}} onClick={clear}>Clear</button>
-                <button style={{width: 96}} onClick={handleClickDownload('svg')}>Download SVG</button>
                 <button style={{width: 96}} onClick={handleClickDownload('png')}>Download PNG</button>
                 <button style={{width: 96}} onClick={handleClickDownload('jpg')}>Download JPG</button>
+                <button style={{width: 96}} onClick={handleClickDownload('svg')}>Download SVG</button>
             </div>
+
+            {/* <div style={{backgroundColor: 'red', width: 439, height: 439}}></div> */}
 
         </div>
 
