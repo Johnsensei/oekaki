@@ -89,6 +89,7 @@ function Main() {
                             '#FF8B00', '#FCFC0A'
                             ]}
                     onChangeComplete={(color) => changePenColor(color.hex)}
+                    // styles={{border: 500, backgroundColor: 'black'}}
                 />
             </div>
 
