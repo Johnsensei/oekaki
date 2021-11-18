@@ -70,15 +70,15 @@ function Main() {
         />
 
         {/* Buttons */}
-        <div style={{backgroundColor: 'red', height: 262, marginTop: '5vh', marginLeft: 5}}>
+        <div style={{ height: 262, marginTop: '5vh', marginLeft: 5}}>
 
-            <div style={{backgroundColor: 'yellow'}}>
+            <div style={{}}>
                 <button onClick={() => changePenWidth(2)}>2</button>
                 <button onClick={() => changePenWidth(5)}>5</button>
                 <button onClick={() => changePenWidth(10)}>10</button>
             </div>
 
-            <div style={{backgroundColor: 'teal'}}>
+            <div style={{}}>
                 <GithubPicker
                     width={'50px'}
                     triangle={'hide'}
@@ -92,7 +92,7 @@ function Main() {
                 />
             </div>
 
-            <div style={{width: 100, backgroundColor: 'purple'}}>
+            <div style={{width: 100}}>
                 <button onClick={undo}>Undo</button>
                 <button onClick={clear}>Clear</button>
                 <button onClick={handleClickDownload('svg')}>Download SVG</button>
