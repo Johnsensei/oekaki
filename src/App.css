@@ -91,3 +91,10 @@
     transform:scale(0.80);
   }
 }
+
+@media only screen and (orientation:landscape) {
+  body {
+    height: 100vw;
+    transform: rotate(90deg);
+  }
+}
