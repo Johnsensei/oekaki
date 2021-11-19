@@ -78,6 +78,11 @@ function Main() {
     setPush(1);
   }
 
+  function runAnim(e) {
+    e.target.classList.add("animate");
+    setTimeout(() => e.target.classList.remove("animate"), 200) // make sure the timoeut matches the animation duration
+  }
+
   return (
     
     <div className='main-container'>
@@ -128,7 +133,7 @@ function Main() {
             {/* Circle Color Buttons */}
             <div style={{width: 96}}>
                 <img src={BlackCircle} alt='black' className='color-button'
-                  onClick={() => {changePenColor('#000000');
+                  onClick={(e) => {changePenColor('#000000');
                   changeSetPush()}} onAnimationEnd={() => setPush(0)} push={push}
                   />
                 <img src={WhiteCircle} alt='white' className='color-button'
