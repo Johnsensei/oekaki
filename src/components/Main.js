@@ -1,17 +1,8 @@
 import React, { useEffect, useCallback, useState} from 'react';
+import ColorButton from './ColorButton';
 import '../App.css'
 import Pressure from 'pressure';
 import { useSvgDrawing } from 'react-hooks-svgdrawing';
-
-
-// import White from '../img/white.png';
-// import Black from '../img/black.png';
-// import Green from '../img/green.png';
-// import Red from '../img/red.png';
-// import Purple from '../img/purple.png';
-// import Blue from '../img/blue.png';
-// import Orange from '../img/orange.png';
-// import Yellow from '../img/yellow.png';
 
 import WhiteCircle from '../img/white-circle.png';
 import BlackCircle from '../img/black-circle.png';
@@ -71,18 +62,6 @@ function Main() {
     })
   }, [divRef, pressureChange]);
 
-  const [push, setPush] = useState(0);
-
-//This function was tried but didn't solve the problem:
-  function changeSetPush(){
-    setPush(1);
-  }
-
-  function runAnim(e) {
-    e.target.classList.add("animate");
-    setTimeout(() => e.target.classList.remove("animate"), 200) // make sure the timoeut matches the animation duration
-  }
-
   return (
     
     <div className='main-container'>
@@ -98,13 +77,6 @@ function Main() {
         {/* Buttons */}
         <div className='side-buttons-container'>
 
-            {/* Pen Width Buttons */}
-            {/* <div >
-                <button style={{width: 32}} onClick={() => changePenWidth(2)}>2</button>
-                <button style={{width: 32}} onClick={() => changePenWidth(5)}>5</button>
-                <button style={{width: 32}} onClick={() => changePenWidth(10)}>10</button>
-            </div> */}
-
             {/* Pen Width IMAGE Buttons */}
             <div>
               <img src={TwoPX} alt='2 pixel pen' className='pen-select-button'
@@ -118,52 +90,50 @@ function Main() {
                 />
             </div>
 
-            {/* Image Color Buttons Square*/}
-            {/* <div style={{width: 96}}>
-                <img src={White} alt='white' className='color-button' onClick={() => changePenColor('#FFFFFF')}/>
-                <img src={Black} alt='black' className='color-button' onClick={() => changePenColor('#000000')}/>
-                <img src={Green} alt='green' className='color-button' onClick={() => changePenColor('#3FF913')}/>
-                <img src={Red} alt='red' className='color-button' onClick={() => changePenColor('#FE2B01')}/>
-                <img src={Purple} alt='purple' className='color-button' onClick={() => changePenColor('#F03EFE')}/>
-                <img src={Blue} alt='blue' className='color-button' onClick={() => changePenColor('#2A2EFE')}/>
-                <img src={Orange} alt='orange' className='color-button' onClick={() => changePenColor('#FF8B00')}/>
-                <img src={Yellow} alt='yellow' className='color-button' onClick={() => changePenColor('#FCFC0A')}/> 
-            </div> */}
-
             {/* Circle Color Buttons */}
             <div style={{width: 96}}>
-                <img src={BlackCircle} alt='black' className='color-button'
-                  onClick={(e) => {changePenColor('#000000');
-                  changeSetPush()}} onAnimationEnd={() => setPush(0)} push={push}
-                  />
-                <img src={WhiteCircle} alt='white' className='color-button'
-                  onClick={() => {changePenColor('#FFFFFF');
-                  setPush(1)}} onAnimationEnd={() => setPush(0)} push={push}
-                  />
-                <img src={RedCircle} alt='red' className='color-button'
-                  onClick={() => {changePenColor('#FE2B01');
-                  setPush(1)}} onAnimationEnd={() => setPush(0)} push={push}
-                  />
-                <img src={GreenCircle} alt='green' className='color-button'
-                  onClick={() => {changePenColor('#3FF913');
-                  setPush(1)}} onAnimationEnd={() => setPush(0)} push={push}
-                  />
-                <img src={YellowCircle} alt='yellow' className='color-button'
-                  onClick={() => {changePenColor('#FCFC0A');
-                  setPush(1)}} onAnimationEnd={() => setPush(0)} push={push}
-                  />
-                <img src={BlueCircle} alt='blue' className='color-button'
-                  onClick={() => {changePenColor('#2A2EFE');
-                  setPush(1)}} onAnimationEnd={() => setPush(0)} push={push}
-                  />
-                <img src={OrangeCircle} alt='orange' className='color-button'
-                  onClick={() => {changePenColor('#FF8B00');
-                  setPush(1)}} onAnimationEnd={() => setPush(0)} push={push}
-                  />
-                <img src={PurpleCircle} alt='purple' className='color-button'
-                  onClick={() => {changePenColor('#F03EFE');
-                  setPush(1)}} onAnimationEnd={() => setPush(0)} push={push}
-                  />
+
+                <ColorButton
+                  src={BlackCircle}
+                  alt='black'
+                  onClick={() => changePenColor('#000000')}
+                />
+                <ColorButton
+                  src={WhiteCircle}
+                  alt='white'
+                  onClick={() => changePenColor('#FFFFFF')}
+                />
+                <ColorButton
+                  src={RedCircle}
+                  alt='red'
+                  onClick={() => changePenColor('#FE2B01')}
+                />
+                <ColorButton
+                  src={GreenCircle}
+                  alt='green'
+                  onClick={() => changePenColor('#3FF913')}
+                />
+                <ColorButton
+                  src={YellowCircle}
+                  alt='yellow'
+                  onClick={() => changePenColor('#FCFC0A')}
+                />
+                <ColorButton
+                  src={BlueCircle}
+                  alt='blue'
+                  onClick={() => changePenColor('#2A2EFE')}
+                />
+                <ColorButton
+                  src={OrangeCircle}
+                  alt='orange'
+                  onClick={() => changePenColor('#FF8B00')}
+                />
+                <ColorButton
+                  src={PurpleCircle}
+                  alt='purple'
+                  onClick={() => changePenColor('#F03EFE')}
+                />
+
             </div>
 
             {/* Action Buttons */}
@@ -174,8 +144,6 @@ function Main() {
                 <button style={{width: 96}} onClick={handleClickDownload('jpg')}>Download JPG</button>
                 <button style={{width: 96}} onClick={handleClickDownload('svg')}>Download SVG</button>
             </div>
-
-            {/* <div style={{backgroundColor: 'red', width: 439, height: 439}}></div> */}
 
         </div>
 
