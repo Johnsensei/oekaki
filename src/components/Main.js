@@ -4,14 +4,14 @@ import Pressure from 'pressure';
 import { useSvgDrawing } from 'react-hooks-svgdrawing';
 
 
-import White from '../img/white.png';
-import Black from '../img/black.png';
-import Green from '../img/green.png';
-import Red from '../img/red.png';
-import Purple from '../img/purple.png';
-import Blue from '../img/blue.png';
-import Orange from '../img/orange.png';
-import Yellow from '../img/yellow.png';
+// import White from '../img/white.png';
+// import Black from '../img/black.png';
+// import Green from '../img/green.png';
+// import Red from '../img/red.png';
+// import Purple from '../img/purple.png';
+// import Blue from '../img/blue.png';
+// import Orange from '../img/orange.png';
+// import Yellow from '../img/yellow.png';
 
 import WhiteCircle from '../img/white-circle.png';
 import BlackCircle from '../img/black-circle.png';
@@ -70,6 +70,10 @@ function Main() {
 
   const [push, setPush] = useState(0);
 
+  function changeSetPush(){
+    setPush(1);
+  }
+
   return (
     
     <div className='main-container'>
@@ -108,7 +112,7 @@ function Main() {
             <div style={{width: 96}}>
                 <img src={BlackCircle} alt='black' className='color-button'
                   onClick={() => {changePenColor('#000000');
-                  setPush(1)}} onAnimationEnd={() => setPush(0)} push={push}
+                  changeSetPush()}} onAnimationEnd={() => setPush(0)} push={push}
                   />
                 <img src={WhiteCircle} alt='white' className='color-button'
                   onClick={() => {changePenColor('#FFFFFF');
