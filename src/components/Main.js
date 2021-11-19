@@ -1,5 +1,6 @@
 import React, { useEffect, useCallback, useState} from 'react';
 import ColorButton from './ColorButton';
+import PenButton from './PenButton';
 import '../App.css'
 import Pressure from 'pressure';
 import { useSvgDrawing } from 'react-hooks-svgdrawing';
@@ -79,7 +80,24 @@ function Main() {
 
             {/* Pen Width IMAGE Buttons */}
             <div>
-              <img src={TwoPX} alt='2 pixel pen' className='pen-select-button'
+
+              <PenButton
+                src={TwoPX}
+                alt='2 pixel pen'
+                onClick={() => changePenWidth(2)}
+              />
+              <PenButton
+                src={FivePX}
+                alt='5 pixel pen'
+                onClick={() => changePenWidth(5)}
+              />
+              <PenButton
+                src={TenPX}
+                alt='10 pixel pen'
+                onClick={() => changePenWidth(10)}
+              />
+
+              {/* <img src={TwoPX} alt='2 pixel pen' className='pen-select-button'
                 onClick={() => changePenWidth(2)}
                 />
               <img src={FivePX} alt='5 pixel pen' className='pen-select-button'
@@ -87,7 +105,8 @@ function Main() {
                 />
               <img src={TenPX} alt='10 pixel pen' className='pen-select-button'
                 onClick={() => changePenWidth(10)}
-                />
+                /> */}
+
             </div>
 
             {/* Circle Color Buttons */}

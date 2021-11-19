@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
 
-const ColorButton = ({ alt, onClick, src }) => {
+const PenButton = ({ alt, onClick, src }) => {
     const [pushed, setPushed] = useState(false);
   
     return (<img 
              src={src}
              alt={alt}
-             className={`color-button ${pushed ? "push" : ""}`}
+             className={`pen-select-button ${pushed ? "push" : ""}`}
              onClick={() => {
                 onClick();
                 setPushed(true);
@@ -15,4 +15,4 @@ const ColorButton = ({ alt, onClick, src }) => {
              />)
   }
 
-  export default ColorButton;
+  export default PenButton;

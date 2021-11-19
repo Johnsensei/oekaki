@@ -77,10 +77,6 @@
   animation: push 200ms 1;
 }
 
-/* .color-button[push='1'] {
-  animation: push 200ms 1;
-} */
-
 @keyframes push {
   25% {
     transform:scale(0.95);
