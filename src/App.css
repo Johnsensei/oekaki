@@ -63,11 +63,14 @@
   /* background-color: #FF0000; */
 }
 
+.pen-select-button {
+  width: 32px;
+}
+
 .color-button {
   width: 48px;
   height: 48px;
   vertical-align: bottom;
-  
 }
 
 .color-button[push='1'] {

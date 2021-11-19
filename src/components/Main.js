@@ -21,6 +21,9 @@ import PurpleCircle from '../img/purple-circle.png';
 import BlueCircle from '../img/blue-circle.png';
 import OrangeCircle from '../img/orange-circle.png';
 import YellowCircle from '../img/yellow-circle.png';
+import TwoPX from '../img/2PX.png';
+import FivePX from '../img/5PX.png';
+import TenPX from '../img/10PX.png';
 
 function Main() {
 
@@ -70,6 +73,7 @@ function Main() {
 
   const [push, setPush] = useState(0);
 
+//This function was tried but didn't solve the problem:
   function changeSetPush(){
     setPush(1);
   }
@@ -90,10 +94,23 @@ function Main() {
         <div className='side-buttons-container'>
 
             {/* Pen Width Buttons */}
-            <div >
+            {/* <div >
                 <button style={{width: 32}} onClick={() => changePenWidth(2)}>2</button>
                 <button style={{width: 32}} onClick={() => changePenWidth(5)}>5</button>
                 <button style={{width: 32}} onClick={() => changePenWidth(10)}>10</button>
+            </div> */}
+
+            {/* Pen Width IMAGE Buttons */}
+            <div>
+              <img src={TwoPX} alt='2 pixel pen' className='pen-select-button'
+                onClick={() => changePenWidth(2)}
+                />
+              <img src={FivePX} alt='5 pixel pen' className='pen-select-button'
+                onClick={() => changePenWidth(5)}
+                />
+              <img src={TenPX} alt='10 pixel pen' className='pen-select-button'
+                onClick={() => changePenWidth(10)}
+                />
             </div>
 
             {/* Image Color Buttons Square*/}
