@@ -63,6 +63,7 @@ function Main() {
     })
   }, [divRef, pressureChange]);
 
+
   return (
     
     <div className='main-container'>
@@ -96,16 +97,6 @@ function Main() {
                 alt='10 pixel pen'
                 onClick={() => changePenWidth(10)}
               />
-
-              {/* <img src={TwoPX} alt='2 pixel pen' className='pen-select-button'
-                onClick={() => changePenWidth(2)}
-                />
-              <img src={FivePX} alt='5 pixel pen' className='pen-select-button'
-                onClick={() => changePenWidth(5)}
-                />
-              <img src={TenPX} alt='10 pixel pen' className='pen-select-button'
-                onClick={() => changePenWidth(10)}
-                /> */}
 
             </div>
 
