@@ -101,7 +101,7 @@ function Main() {
             </div>
 
             {/* Circle Color Buttons */}
-            <div style={{width: 96}}>
+            <div className='color-button-container'>
 
                 <ColorButton
                   src={BlackCircle}

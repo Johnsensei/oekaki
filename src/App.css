@@ -37,13 +37,12 @@
   }
 }
 
+/* My Styling */
+
 .main-container {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  height: calc(var(--vh, 1vh) * 100);
-  width: 100%;
-  width: fill-available;
   background-color: #000;
 }
 
@@ -53,21 +52,20 @@
   border: 1px solid #ccc;
   margin-top: 5vh;
   background-color: #fff;
-  /* border-radius: 12px; */
 }
 
 .side-buttons-container {
-  /* TODO: How to make the height equal to the height of all the children combined? */
-  height: 325px;
-
   margin-top: 5vh;
   margin-left: 5px;
   margin-right: 5px;
-  /* background-color: #FF0000; */
 }
 
 .pen-select-button {
   width: 32px;
+}
+
+.color-button-container {
+  width: 96px;
 }
 
 .color-button {
@@ -95,9 +93,39 @@
   }
 }
 
-/* @media only screen and (orientation:portrait) {
-  body {
-    height: 100vw;
-    transform: rotate(90deg);
+@media only screen and (max-width: 700px) {
+  .main-container {
+    flex-direction: column;
+    align-items: center;
   }
-} */
+  
+  .draw-pad {
+    width: 300px;
+    height: 300px;
+  }
+
+  .side-buttons-container {
+    margin-top: 2vh;
+  }
+
+  .pen-select-button {
+    width: 100px;
+  }
+
+  .color-button-container {
+    width: 300px;
+  }
+
+  .color-button {
+    width: 75px;
+    height: 75px;
+    vertical-align: bottom;
+  }
+}
+
+@media only screen and (max-height: 430px) {
+  .draw-pad {
+    width: 300px;
+    height: 300px;
+  }
+}
