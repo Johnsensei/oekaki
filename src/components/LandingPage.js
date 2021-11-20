@@ -94,7 +94,12 @@ function LandingPage(){
                 </div>
             </div>
 
-            
+            {/* Footer */}
+            <div style={{color: '#fff', justifyContent: 'center', alignItems: 'center', textAlign: 'center'}}>
+                <p>
+                Drawsultation was created in one week for the Mintbean Fall 2021 Hiring Hackathon. 
+                </p>
+            </div>
 
 
         </div>
