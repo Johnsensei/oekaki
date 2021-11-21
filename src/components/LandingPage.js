@@ -1,9 +1,12 @@
 import React, { useEffect, useCallback, useState, forceUpdate} from 'react';
 import '../App.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faGlobe, faTwitter } from '@fortawesome/free-solid-svg-icons';
 
 import Logo from '../img/drawsultation.png';
 import JohnProfile from '../img/johnsensei.png';
 import JavinProfile from '../img/javin.jpeg';
+import { faGithubSquare, faLinkedin, faTwitterSquare } from '@fortawesome/free-brands-svg-icons';
 
 
 
@@ -101,6 +104,49 @@ function LandingPage(){
                         >
                         Indie developer, game designer, and Japanese Language Specialist from Nashville, TN. John wrote the code for this site using React, JavaScript, CSS, and HTML. Favorite artist: Yoshitaka Amano. 
                         </p>
+                        {/* Social Icon Container */}
+                        <div style={{display: 'flex', flexDirection:'row', justifyContent:'space-evenly'}}>
+                            <a href='https://www.johngale.dev/' target='_blank' rel="noreferrer"
+                            // style={{margin: '10px'}}
+                            >
+                                <FontAwesomeIcon
+                                icon={faGlobe}
+                                size='3x'
+                                inverse
+                                // style={{backgroundColor: '#fff'}}
+                                />
+                            </a>
+                            <a href='https://github.com/Johnsensei' target='_blank' rel="noreferrer"
+                            // style={{margin: '10px'}}
+                            >
+                                <FontAwesomeIcon
+                                icon={faGithubSquare}
+                                size='3x'
+                                inverse
+                                // style={{backgroundColor: '#fff'}}
+                                />
+                            </a>
+                            <a href='https://www.linkedin.com/in/johnagale/' target='_blank' rel="noreferrer"
+                            // style={{margin: '10px'}}
+                            >
+                                <FontAwesomeIcon
+                                icon={faLinkedin}
+                                size='3x'
+                                inverse
+                                // style={{backgroundColor: '#fff'}}
+                                />
+                            </a>
+                            <a href='https://twitter.com/MrJohnSensei' target='_blank' rel="noreferrer"
+                            // style={{margin: '10px'}}
+                            >
+                                <FontAwesomeIcon
+                                icon={faTwitterSquare}
+                                size='3x'
+                                inverse
+                                // style={{backgroundColor: '#fff'}}
+                                />
+                            </a>
+                        </div>
                     </div>
                     <div className='profile-card'>
                         <img
@@ -115,6 +161,49 @@ function LandingPage(){
                         >
                         Indie developer, game designer, and Japanese Language Specialist from Nashville, TN. John wrote the code for this site using React, JavaScript, CSS, and HTML. Favorite artist: Yoshitaka Amano. 
                         </p>
+                         {/* Social Icon Container */}
+                         <div style={{display: 'flex', flexDirection:'row', justifyContent:'space-evenly'}}>
+                            <a href='https://www.johngale.dev/' target='_blank' rel="noreferrer"
+                            // style={{margin: '10px'}}
+                            >
+                                <FontAwesomeIcon
+                                icon={faGlobe}
+                                size='3x'
+                                inverse
+                                // style={{backgroundColor: '#fff'}}
+                                />
+                            </a>
+                            <a href='https://github.com/Johnsensei' target='_blank' rel="noreferrer"
+                            // style={{margin: '10px'}}
+                            >
+                                <FontAwesomeIcon
+                                icon={faGithubSquare}
+                                size='3x'
+                                inverse
+                                // style={{backgroundColor: '#fff'}}
+                                />
+                            </a>
+                            <a href='https://www.linkedin.com/in/johnagale/' target='_blank' rel="noreferrer"
+                            // style={{margin: '10px'}}
+                            >
+                                <FontAwesomeIcon
+                                icon={faLinkedin}
+                                size='3x'
+                                inverse
+                                // style={{backgroundColor: '#fff'}}
+                                />
+                            </a>
+                            <a href='https://twitter.com/MrJohnSensei' target='_blank' rel="noreferrer"
+                            // style={{margin: '10px'}}
+                            >
+                                <FontAwesomeIcon
+                                icon={faTwitterSquare}
+                                size='3x'
+                                inverse
+                                // style={{backgroundColor: '#fff'}}
+                                />
+                            </a>
+                        </div>
                     </div>
                 
                 </div>
