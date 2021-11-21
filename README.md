@@ -27,6 +27,7 @@ Drawsultation was created in a week for the Fall 2021 Hiring Hackathon hosted by
     - [create-react-app](https://github.com/facebook/create-react-app)
     - [react-hooks-svgdrawing](https://github.com/kmkzt/react-hooks-svgdrawing)
     - [pressure](https://github.com/stuyam/pressure)
+    - [Font Awesome](https://fontawesome.com/v5.15/how-to-use/on-the-web/using-with/react)
 
 ## Available Scripts
 

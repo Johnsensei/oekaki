@@ -1,6 +1,8 @@
 import React, { useEffect, useCallback, useState} from 'react';
 import ColorButton from './ColorButton';
 import PenButton from './PenButton';
+import EditButton from './EditButton';
+import DownloadButton from './DownloadButton';
 import '../App.css'
 import Pressure from 'pressure';
 import { useSvgDrawing } from 'react-hooks-svgdrawing';
@@ -16,6 +18,13 @@ import YellowCircle from '../img/yellow-circle.png';
 import TwoPX from '../img/2PX.png';
 import FivePX from '../img/5PX.png';
 import TenPX from '../img/10PX.png';
+import Undo from '../img/undo.png';
+import Clear from '../img/clear.png';
+import Png from '../img/png.png';
+import Jpg from '../img/jpg.png';
+import Svg from '../img/svg.png';
+import Logo from '../img/drawsultation.png';
+
 
 function Main() {
 
@@ -78,6 +87,15 @@ function Main() {
 
         {/* Buttons */}
         <div className='side-buttons-container'>
+
+          <div className='side-logo-container'>
+            <img
+              src={Logo}
+              alt='Drawsultation logo'
+              style={{width: '96px'}}
+            />
+
+          </div>
 
             {/* Pen Width IMAGE Buttons */}
             <div>
@@ -147,12 +165,35 @@ function Main() {
             </div>
 
             {/* Action Buttons */}
-            <div style={{width: 96}}>
-                <button style={{width: 96}} onClick={undo}>Undo</button>
-                <button style={{width: 96}} onClick={clear}>Clear</button>
-                <button style={{width: 96}} onClick={handleClickDownload('png')}>Download PNG</button>
-                <button style={{width: 96}} onClick={handleClickDownload('jpg')}>Download JPG</button>
-                <button style={{width: 96}} onClick={handleClickDownload('svg')}>Download SVG</button>
+            <div className='action-button-container'>
+              <div className='edit-button-container'>
+                <EditButton
+                  src={Undo}
+                  alt='undo'
+                  onClick={undo}
+                />
+                <EditButton
+                  src={Clear}
+                  alt='clear'
+                  onClick={clear}
+                />
+              </div>
+                <DownloadButton
+                  src={Png}
+                  alt='png'
+                  onClick={handleClickDownload('png')}
+                />
+                <DownloadButton
+                  src={Jpg}
+                  alt='jpeg'
+                  onClick={handleClickDownload('jpg')}
+                />
+                <DownloadButton
+                  src={Svg}
+                  alt='svg'
+                  onClick={handleClickDownload('svg')}
+                />
+               
             </div>
 
         </div>

@@ -49,8 +49,8 @@
 }
 
 .draw-pad {
-  width: 500px;
-  height: 500px;
+  width: 600px;
+  height: 600px;
   border: 1px solid #ccc;
   margin-top: 5vh;
   background-color: #fff;
@@ -60,6 +60,11 @@
   margin-top: 5vh;
   margin-left: 5px;
   margin-right: 5px;
+}
+
+.side-logo-container {
+  width: 96px;
+  background-color: #26AAE1;
 }
 
 .pen-select-button {
@@ -74,6 +79,30 @@
   width: 48px;
   height: 48px;
   vertical-align: bottom;
+}
+
+.action-button-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.edit-button-container {
+  width: 96px;
+}
+
+.edit-button {
+  /* Options to experiment with: */
+  /* width: 48px; */
+  width: 96px;
+  vertical-align: bottom;
+}
+
+.download-button-container {
+  width: 48px;
+}
+
+.download-button {
+  width: 96px;
 }
 
 .push {
@@ -104,6 +133,11 @@
   align-items: center;
   position: sticky;
   top: 0;
+}
+
+.header-logo {
+  margin: 1vh;
+  margin-left: 10px;
 }
 
 .profile-main-container {
@@ -145,6 +179,10 @@
 }
 
 @media only screen and (max-width: 639px) {
+  .header-logo {
+    width: 200px;
+  }
+  
   .main-container {
     flex-direction: column;
     align-items: center;
@@ -171,6 +209,10 @@
     width: 75px;
     height: 75px;
     vertical-align: bottom;
+  }
+
+  .action-button-container {
+    flex-direction: row;
   }
 
   .profile-card-container {

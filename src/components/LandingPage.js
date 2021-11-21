@@ -20,7 +20,7 @@ function LandingPage(){
                 <img 
                     src={Logo}
                     alt='Drawsultation logo'
-                    style={{margin: '1vh'}}
+                    className='header-logo'
                 />
                 <button
                     title='Start Drawing'
@@ -214,6 +214,18 @@ function LandingPage(){
                 <p>
                 Drawsultation was created in one week for the <a href='https://mintbean.io/' target='_blank' rel="noreferrer">Mintbean</a> Fall 2021 Hiring Hackathon. 
                 </p>
+            </div>
+            <div style={{justifyContent: 'center', alignItems: 'center', textAlign: 'center', marginBottom: '20px'}}>
+                <a href='https://github.com/Johnsensei/oekaki' target='_blank' rel="noreferrer"
+                    // style={{margin: '100px'}}
+                    >
+                        <FontAwesomeIcon
+                        icon={faGithubSquare}
+                        size='3x'
+                        inverse
+                        
+                        />
+                </a>
             </div>
 
         </div>
