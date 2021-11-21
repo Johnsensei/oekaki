@@ -92,7 +92,7 @@ function Main() {
             <img
               src={Logo}
               alt='Drawsultation logo'
-              style={{width: '96px'}}
+              style={{width: '90px'}}
             />
 
           </div>
