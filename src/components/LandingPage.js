@@ -1,11 +1,14 @@
-import React, { useEffect, useCallback, useState} from 'react';
+import React, { useEffect, useCallback, useState, forceUpdate} from 'react';
 import '../App.css';
 
 import Logo from '../img/drawsultation.png';
 import JohnProfile from '../img/johnsensei.png';
 import JavinProfile from '../img/javin.jpeg';
 
+
+
 function LandingPage(){
+
     return(
         // Landing Page Container
         <div>
@@ -14,7 +17,24 @@ function LandingPage(){
                 <img 
                     src={Logo}
                     alt='Drawsultation logo'
+                    style={{margin: '1vh'}}
                 />
+                <button
+                    title='Start Drawing'
+                    style={{float: 'right',
+                        backgroundColor: 'grey',
+                        color: '#fff',
+                        fontSize: '24px',
+                        fontWeight:'bold',
+                        textShadow: '2px 2px #000',
+                        margin: '1vh',
+                        height: '80px',
+                        borderRadius: '12px'}}
+                        onClick={() => window.location.pathname = '/app'
+                                }
+                >
+                    Start Drawing!
+                </button>
             </div>
 
             <div style={{color: '#fff', margin: '5vh'}}>
@@ -74,7 +94,9 @@ function LandingPage(){
                         />
                         <h1 >John Gale</h1>
                         <h2>Developer</h2>
-                        <p>
+                        <p
+                            // style={{margin: '1vh'}}
+                        >
                         Indie developer, game designer, and Japanese Language Specialist from Nashville, TN. John wrote the code for this site using React, JavaScript, CSS, and HTML. Favorite artist: Yoshitaka Amano. 
                         </p>
                     </div>
@@ -86,7 +108,9 @@ function LandingPage(){
                         />
                         <h1 >Javin Stone</h1>
                         <h2>Designer</h2>
-                        <p>
+                        <p
+                            // style={{margin: '1vh'}}
+                        >
                         Indie developer, game designer, and Japanese Language Specialist from Nashville, TN. John wrote the code for this site using React, JavaScript, CSS, and HTML. Favorite artist: Yoshitaka Amano. 
                         </p>
                     </div>
@@ -100,7 +124,6 @@ function LandingPage(){
                 Drawsultation was created in one week for the <a href='https://mintbean.io/' target='_blank' rel="noreferrer">Mintbean</a> Fall 2021 Hiring Hackathon. 
                 </p>
             </div>
-
 
         </div>
     );
