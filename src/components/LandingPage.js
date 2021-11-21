@@ -1,7 +1,7 @@
 import React, { useEffect, useCallback, useState, forceUpdate} from 'react';
 import '../App.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faGlobe, faTwitter } from '@fortawesome/free-solid-svg-icons';
+import { faGlobe } from '@fortawesome/free-solid-svg-icons';
 
 import Logo from '../img/drawsultation.png';
 import JohnProfile from '../img/johnsensei.png';
