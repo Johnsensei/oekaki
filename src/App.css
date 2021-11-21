@@ -138,6 +138,12 @@
   border-radius: 12px;
 }
 
+.not-found-anchor {
+  background-color: #fff;
+  padding: 2px;
+  border-radius: 4px;
+}
+
 @media only screen and (max-width: 639px) {
   .main-container {
     flex-direction: column;

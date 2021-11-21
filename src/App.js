@@ -1,6 +1,7 @@
 import React from "react";
 import Main from "./components/Main";
 import LandingPage from "./components/LandingPage";
+import NotFound from "./components/NotFound";
 
 
 function App () {
@@ -8,7 +9,8 @@ function App () {
     return(
     <div>
         {(window.location.pathname === "/") ? <LandingPage/>
-        : <Main/>}
+        : (window.location.pathname === "/app") ? <Main/>
+        : <NotFound/>}
     </div>
     );
 }

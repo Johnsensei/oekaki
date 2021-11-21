@@ -29,6 +29,8 @@ function LandingPage(){
                         textShadow: '2px 2px #000',
                         margin: '1vh',
                         height: '80px',
+                        paddingRight: '10px',
+                        paddingLeft: '10px',
                         borderRadius: '12px'}}
                         onClick={() => window.location.pathname = '/app'
                                 }
