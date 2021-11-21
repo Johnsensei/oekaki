@@ -6,7 +6,7 @@ import { faGlobe, faTwitter } from '@fortawesome/free-solid-svg-icons';
 import Logo from '../img/drawsultation.png';
 import JohnProfile from '../img/johnsensei.png';
 import JavinProfile from '../img/javin.jpeg';
-import { faGithubSquare, faLinkedin, faTwitterSquare } from '@fortawesome/free-brands-svg-icons';
+import { faGithubSquare, faInstagram, faLinkedin, faTwitterSquare } from '@fortawesome/free-brands-svg-icons';
 
 
 
@@ -51,10 +51,10 @@ function LandingPage(){
 
             {/* Placeholder image for animated GIF */}
             <div style={{display: 'flex', justifyContent: 'center'}}>
-                <img 
+                {/* <img 
                         src={Logo}
                         alt='Drawsultation logo'
-                />
+                /> */}
             </div>
 
             <div style={{color: '#fff', margin: '5vh'}}>
@@ -73,10 +73,10 @@ function LandingPage(){
 
             {/* Placeholder image for animated GIF */}
             <div style={{display: 'flex', justifyContent: 'center'}}>
-                <img 
+                {/* <img 
                         src={Logo}
                         alt='Drawsultation logo'
-                />
+                /> */}
             </div>
 
             <div style={{color: '#fff', margin: '5vh'}}>
@@ -100,7 +100,7 @@ function LandingPage(){
                         <h1 >John Gale</h1>
                         <h2>Developer</h2>
                         <p
-                            // style={{margin: '1vh'}}
+                            style={{display:'block'}}
                         >
                         Indie developer, game designer, and Japanese Language Specialist from Nashville, TN. John wrote the code for this site using React, JavaScript, CSS, and HTML. Favorite artist: Yoshitaka Amano. 
                         </p>
@@ -113,7 +113,7 @@ function LandingPage(){
                                 icon={faGlobe}
                                 size='3x'
                                 inverse
-                                // style={{backgroundColor: '#fff'}}
+                                
                                 />
                             </a>
                             <a href='https://github.com/Johnsensei' target='_blank' rel="noreferrer"
@@ -123,7 +123,7 @@ function LandingPage(){
                                 icon={faGithubSquare}
                                 size='3x'
                                 inverse
-                                // style={{backgroundColor: '#fff'}}
+                                
                                 />
                             </a>
                             <a href='https://www.linkedin.com/in/johnagale/' target='_blank' rel="noreferrer"
@@ -133,7 +133,7 @@ function LandingPage(){
                                 icon={faLinkedin}
                                 size='3x'
                                 inverse
-                                // style={{backgroundColor: '#fff'}}
+                                
                                 />
                             </a>
                             <a href='https://twitter.com/MrJohnSensei' target='_blank' rel="noreferrer"
@@ -143,7 +143,7 @@ function LandingPage(){
                                 icon={faTwitterSquare}
                                 size='3x'
                                 inverse
-                                // style={{backgroundColor: '#fff'}}
+                                
                                 />
                             </a>
                         </div>
@@ -159,48 +159,48 @@ function LandingPage(){
                         <p
                             // style={{margin: '1vh'}}
                         >
-                        Indie developer, game designer, and Japanese Language Specialist from Nashville, TN. John wrote the code for this site using React, JavaScript, CSS, and HTML. Favorite artist: Yoshitaka Amano. 
+                        Artist, Designer, one half of the creative force behind JABECon, and overall cool guy. Javin designed the UI layouts and did the graphic design for this page. John is always dependent on Javin for any art work.
                         </p>
                          {/* Social Icon Container */}
                          <div style={{display: 'flex', flexDirection:'row', justifyContent:'space-evenly'}}>
-                            <a href='https://www.johngale.dev/' target='_blank' rel="noreferrer"
+                            <a href='http://www.jabecon.com/' target='_blank' rel="noreferrer"
                             // style={{margin: '10px'}}
                             >
                                 <FontAwesomeIcon
                                 icon={faGlobe}
                                 size='3x'
                                 inverse
-                                // style={{backgroundColor: '#fff'}}
+                                
                                 />
                             </a>
-                            <a href='https://github.com/Johnsensei' target='_blank' rel="noreferrer"
+                            {/* <a href='https://github.com/Johnsensei' target='_blank' rel="noreferrer"
                             // style={{margin: '10px'}}
                             >
                                 <FontAwesomeIcon
                                 icon={faGithubSquare}
                                 size='3x'
                                 inverse
-                                // style={{backgroundColor: '#fff'}}
+                                
                                 />
-                            </a>
-                            <a href='https://www.linkedin.com/in/johnagale/' target='_blank' rel="noreferrer"
+                            </a> */}
+                            <a href='https://www.instagram.com/zanemiddleten/' target='_blank' rel="noreferrer"
                             // style={{margin: '10px'}}
                             >
                                 <FontAwesomeIcon
-                                icon={faLinkedin}
+                                icon={faInstagram}
                                 size='3x'
                                 inverse
-                                // style={{backgroundColor: '#fff'}}
+                                
                                 />
                             </a>
-                            <a href='https://twitter.com/MrJohnSensei' target='_blank' rel="noreferrer"
+                            <a href='https://twitter.com/ZaneMiddleten' target='_blank' rel="noreferrer"
                             // style={{margin: '10px'}}
                             >
                                 <FontAwesomeIcon
                                 icon={faTwitterSquare}
                                 size='3x'
                                 inverse
-                                // style={{backgroundColor: '#fff'}}
+                                
                                 />
                             </a>
                         </div>

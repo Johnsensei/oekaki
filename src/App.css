@@ -128,7 +128,7 @@
   align-self: center;
   text-align: center;
   margin: 2vh;
-  width: 400px;;
+  width: 350px;;
   /* background-color: purple; */
 }
 
@@ -175,6 +175,10 @@
 
   .profile-card-container {
     flex-direction: column;
+  }
+
+  .profile-card {
+    margin-bottom: 10vh;
   }
 
 }
