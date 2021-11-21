@@ -236,6 +236,69 @@
 }
 
 @media only screen and (max-width: 415px) and (max-height: 746px) {
+  .draw-pad {
+    margin-top: 1vh;
+  }
+  
+  .action-button-container {
+    flex-direction: row;
+  }
 
+  .edit-button-container{
+    width: 120px;
+  }
+
+  .edit-button {
+    width: 60px;
+  }
+
+  .download-button-container {
+    width: 180px;
+  }
+
+  .download-button {
+    width: 60px;
+  }
+}
+
+/* For Galaxy Fold */
+@media only screen and (max-width: 281px) {
+  .draw-pad {
+    width: 250px;
+    height: 250px;
+  }
+
+  .side-buttons-container {
+    width: 250px;
+  }
+
+  .side-logo-container {
+    width: 250px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    justify-self: center;
+  }
+
+  .side-logo {
+    width: 220px;
+  }
+
+  .pen-button-container{
+    width: 250px;
+  }
+
+  .pen-select-button {
+    width: 83.33px;
+  }
+
+  .color-button-container {
+    width: 250px;
+  }
+
+  .color-button {
+    width: 62.5px;
+    height: 62.5px;
+  }
 }
 
