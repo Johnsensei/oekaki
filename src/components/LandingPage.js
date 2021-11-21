@@ -5,7 +5,7 @@ import { faGlobe, faTwitter } from '@fortawesome/free-solid-svg-icons';
 
 import Logo from '../img/drawsultation.png';
 import JohnProfile from '../img/johnsensei.png';
-import JavinProfile from '../img/javin.jpeg';
+import JavinProfile from '../img/javin.png';
 import { faGithubSquare, faInstagram, faLinkedin, faTwitterSquare } from '@fortawesome/free-brands-svg-icons';
 
 
