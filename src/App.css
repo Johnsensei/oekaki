@@ -60,6 +60,8 @@
   margin-top: 5vh;
   margin-left: 5px;
   margin-right: 5px;
+  /* position: relative; */
+  /* z-index: 0; */
 }
 
 .side-logo-container {
@@ -70,11 +72,25 @@
   justify-content: center;
   align-items: center;
   text-align: center;
-  border-radius: 4px;
+  border-radius: 4px 4px 0 0;
+  /* position: relative; */
+  /* z-index: 1; */
+}
+
+.side-logo {
+  width: 90px;
+}
+
+.pen-button-container {
+  width: 96px;
+  background: linear-gradient(180deg, #26AAE1 50%, #26AAE100 50%);
+  /* background-color: #26AAE1; */
 }
 
 .pen-select-button {
   width: 32px;
+  /* position: relative; */
+  /* z-index: 2; */
 }
 
 .color-button-container {
@@ -109,6 +125,7 @@
 
 .download-button {
   width: 96px;
+  vertical-align: bottom;
 }
 
 .push {
@@ -203,6 +220,14 @@
     margin-top: 2vh;
   }
 
+  .side-logo-container {
+    width: 300px;
+  }
+
+  .side-logo {
+    width: 270px;
+  }
+
   .pen-select-button {
     width: 100px;
   }
@@ -217,8 +242,9 @@
     vertical-align: bottom;
   }
 
-  .action-button-container {
+  .edit-button-container {
     flex-direction: row;
+    width: 300px;
   }
 
   .profile-card-container {

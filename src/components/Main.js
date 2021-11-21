@@ -92,13 +92,13 @@ function Main() {
             <img
               src={Logo}
               alt='Drawsultation logo'
-              style={{width: '90px'}}
+              className='side-logo'
             />
 
           </div>
 
             {/* Pen Width IMAGE Buttons */}
-            <div>
+            <div className='pen-button-container'>
 
               <PenButton
                 src={TwoPX}
@@ -178,6 +178,7 @@ function Main() {
                   onClick={clear}
                 />
               </div>
+              <div className='download-button-container'>
                 <DownloadButton
                   src={Png}
                   alt='png'
@@ -193,6 +194,7 @@ function Main() {
                   alt='svg'
                   onClick={handleClickDownload('svg')}
                 />
+              </div>
                
             </div>
 
