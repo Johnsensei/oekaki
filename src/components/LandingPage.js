@@ -2,11 +2,13 @@ import React, { useEffect, useCallback, useState, forceUpdate} from 'react';
 import '../App.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGlobe } from '@fortawesome/free-solid-svg-icons';
+import { faGithubSquare, faInstagram, faLinkedin, faTwitterSquare } from '@fortawesome/free-brands-svg-icons';
 
 import Logo from '../img/drawsultation.png';
 import JohnProfile from '../img/johnsensei.png';
 import JavinProfile from '../img/javin.png';
-import { faGithubSquare, faInstagram, faLinkedin, faTwitterSquare } from '@fortawesome/free-brands-svg-icons';
+import PhoneDemo from '../img/demo-edit2.gif';
+
 
 
 
@@ -73,10 +75,11 @@ function LandingPage(){
 
             {/* Placeholder image for animated GIF */}
             <div style={{display: 'flex', justifyContent: 'center'}}>
-                {/* <img 
-                        src={Logo}
-                        alt='Drawsultation logo'
-                /> */}
+                <img 
+                        src={PhoneDemo}
+                        alt='phone demo'
+                        style={{width: '50%'}}
+                />
             </div>
 
             <div style={{color: '#fff', margin: '5vh'}}>
