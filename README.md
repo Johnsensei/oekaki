@@ -1,4 +1,4 @@
-# Drawsultation
+# [Drawsultation](https://github.com/Johnsensei/oekaki/blob/master/src/img/logo.png)
 
 ## Try [Drawsultation](https://www.drawsultation.com) for yourself!
 
@@ -9,6 +9,8 @@
 ## About Drawsultation
 
 Drawsultation is a simple web app that allows a single user to freestyle draw and then save that drawing as a PNG, JPEG, or SVG. The app intentionally has a limited color pallette of only eight colors for simplicity and creative constraint.
+
+![img](https://github.com/Johnsensei/oekaki/blob/master/src/img/demo-edit2.gif)
 
 Drawsultation was created in a week for the Fall 2021 Hiring Hackathon hosted by [Mintbean](https://www.mintbean.io/).
 
