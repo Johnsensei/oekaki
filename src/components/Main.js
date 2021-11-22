@@ -66,6 +66,7 @@ function Main() {
 
   // Pressure -> https://github.com/stuyam/pressure
   useEffect(() => {
+    window.scrollTo(0, 1);
     if (!divRef.current) return
     Pressure.set(divRef.current, {
       change: pressureChange
