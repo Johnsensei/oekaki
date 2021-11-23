@@ -159,6 +159,10 @@
   .header-logo {
     width: 200px;
   }
+
+  .computer-demo {
+    width: 75%;
+  }
   
   .main-container {
     flex-direction: column;

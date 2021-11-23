@@ -7,6 +7,8 @@ import { faGithubSquare, faInstagram, faLinkedin, faTwitterSquare } from '@forta
 import Logo from '../img/drawsultation.png';
 import JohnProfile from '../img/johnsensei.png';
 import JavinProfile from '../img/javin.png';
+import BarretDemo from '../img/barret.gif';
+import ComputerDemo from '../img/computer.gif';
 import PhoneDemo from '../img/demo-edit2.gif';
 
 
@@ -51,12 +53,13 @@ function LandingPage(){
                 </p>     
             </div>
 
-            {/* Placeholder image for animated GIF */}
+            {/* Animated GIF with real artist drawing */}
             <div style={{display: 'flex', justifyContent: 'center'}}>
-                {/* <img 
-                        src={Logo}
-                        alt='Drawsultation logo'
-                /> */}
+                <img 
+                        src={BarretDemo}
+                        alt='Drawsultation demo on smart phone'
+                        style={{width: '15%'}}
+                />
             </div>
 
             <div style={{color: '#fff', margin: '5vh'}}>
@@ -66,14 +69,23 @@ function LandingPage(){
                 </p>    
             </div>
 
-            <div style={{color: '#fff', margin: '5vh'}}>
-                <h1>Creativity happens in the confines</h1>
-                <p>
-                With only eight colors and three pen widths, Drawsultation challenges your innermost creativity to work with limited tools in expressing your idea.  
-                </p>     
+            {/* Animated GIF of computer demo */}
+            <div style={{display: 'flex', justifyContent: 'center'}}>
+                <img 
+                        src={ComputerDemo}
+                        alt='Drawsultation demo on computer'
+                        className='computer-demo'
+                />
             </div>
 
-            {/* Placeholder image for animated GIF */}
+            <div style={{color: '#fff', margin: '5vh'}}>
+                <h1 style={{textAlign: 'left'}}>Mobile friendly</h1>
+                <p style={{textAlign: 'left'}}>
+                Drawsultation’s responsive design allows you to use it anywhere: phone, tablet, computer.  
+                </p>    
+            </div>
+
+            {/* Animated GIF of responsiveness demo */}
             <div style={{display: 'flex', justifyContent: 'center'}}>
                 <img 
                         src={PhoneDemo}
@@ -83,16 +95,16 @@ function LandingPage(){
             </div>
 
             <div style={{color: '#fff', margin: '5vh'}}>
-                <h1 style={{textAlign: 'right'}}>Mobile friendly</h1>
+                <h1 style={{textAlign: 'right'}}>Creativity happens in the confines</h1>
                 <p style={{textAlign: 'right'}}>
-                Drawsultation’s responsive design allows you to use it anywhere: phone, tablet, computer.  
-                </p>    
+                With only eight colors and three pen widths, Drawsultation challenges your innermost creativity to work with limited tools in expressing your idea.  
+                </p>     
             </div>
 
             {/* Team Profiles */}
             <div className='profile-main-container'>
                 <h1 style={{textAlign: 'center'}}>The Team</h1>
-
+                <p style={{textAlign: 'center'}}>Profile pictures created with Drawsultation!</p>
                 <div className='profile-card-container'>
                     <div className='profile-card'>
                         <img
@@ -105,7 +117,7 @@ function LandingPage(){
                         <p
                             style={{display:'block'}}
                         >
-                        Indie developer, game designer, and Japanese Language Specialist from Nashville, TN. John wrote the code for this site using React, JavaScript, CSS, and HTML. Favorite artist: Yoshitaka Amano. 
+                        Indie developer, game designer, and Japanese Language Specialist from Nashville, TN. John wrote the code for this site using React, <a href="https://kmkzt.github.io/react-hooks-svgdrawing/" target='_blank' rel="noreferrer">react-hooks-svgdrawing</a>, JavaScript, CSS, and HTML. Favorite artist: Yoshitaka Amano. 
                         </p>
                         {/* Social Icon Container */}
                         <div style={{display: 'flex', flexDirection:'row', justifyContent:'space-evenly'}}>
