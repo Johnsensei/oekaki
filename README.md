@@ -14,6 +14,8 @@ Drawsultation is a simple web app that allows a single user to freestyle draw an
 
 Drawsultation was created in a week for the Fall 2021 Hiring Hackathon hosted by [Mintbean](https://www.mintbean.io/).
 
+The react-hooks-svgdrawing [Sample Project](https://kmkzt.github.io/react-hooks-svgdrawing/) was used as a code base for Drawsultation under an MIT license Copyright (c) 2019 kmkzt.
+
 ## Technologies
 - Development
     - React
