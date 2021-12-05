@@ -3,6 +3,7 @@ import ColorButton from './ColorButton';
 import PenButton from './PenButton';
 import EditButton from './EditButton';
 import DownloadButton from './DownloadButton';
+import SocialModal from './ShareModal';
 import '../App.css'
 import Pressure from 'pressure';
 import { useSvgDrawing } from 'react-hooks-svgdrawing';
@@ -22,6 +23,7 @@ import Undo from '../img/undo.png';
 import Clear from '../img/clear.png';
 import Png from '../img/png.png';
 import Jpg from '../img/jpg.png';
+import Share from '../img/share.png';
 import Svg from '../img/svg.png';
 import Logo from '../img/drawsultation.png';
 
@@ -45,6 +47,7 @@ function Main() {
   // Ignore warnings that these values are never used. They are needed.
   const [xml, setXml] = useState('')
   const [penThinnerWidth, setPenThinnerWidth] = useState(0)
+  const [showModal, setShowModal] = useState(false);
 
   const handleChangeXML = useCallback(() => {
     setXml(getSvgXML())
@@ -77,6 +80,8 @@ function Main() {
   return (
     
     <div className='main-container'>
+
+      {showModal ? <SocialModal/> : null}
 
         {/* Draw Pad */}
         <div
@@ -191,9 +196,9 @@ function Main() {
                   onClick={handleClickDownload('jpg')}
                 />
                 <DownloadButton
-                  src={Svg}
-                  alt='svg'
-                  onClick={handleClickDownload('svg')}
+                  src={Share}
+                  alt='share button'
+                  onClick={() => setShowModal(!showModal)}
                 />
               </div>
                
