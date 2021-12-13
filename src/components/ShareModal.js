@@ -1,10 +1,10 @@
 import React from "react";
 import '../App.css';
 
-const SocialModal = () => {
+const SocialModal = ({setShowModal}) => {
     return(
-        <div style={{backgroundColor: 'white'}}>
-
+        <div className='modal-background'>
+            <button onClick= {() => setShowModal(false)} >Close</button>
         </div>
     );
 }

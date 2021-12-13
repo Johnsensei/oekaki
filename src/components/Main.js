@@ -3,7 +3,7 @@ import ColorButton from './ColorButton';
 import PenButton from './PenButton';
 import EditButton from './EditButton';
 import DownloadButton from './DownloadButton';
-import SocialModal from './ShareModal';
+import ShareModal from './ShareModal';
 import '../App.css'
 import Pressure from 'pressure';
 import { useSvgDrawing } from 'react-hooks-svgdrawing';
@@ -44,9 +44,11 @@ function Main() {
     penWidth: 2,
     penColor: '#000'
   })
+
   // Ignore warnings that these values are never used. They are needed.
   const [xml, setXml] = useState('')
   const [penThinnerWidth, setPenThinnerWidth] = useState(0)
+
   const [showModal, setShowModal] = useState(false);
 
   const handleChangeXML = useCallback(() => {
@@ -81,7 +83,7 @@ function Main() {
     
     <div className='main-container'>
 
-      {showModal ? <SocialModal/> : null}
+      {showModal && <ShareModal setShowModal={setShowModal}/>}
 
         {/* Draw Pad */}
         <div
