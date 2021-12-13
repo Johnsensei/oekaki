@@ -4,7 +4,9 @@ import '../App.css';
 const SocialModal = ({setShowModal}) => {
     return(
         <div className='modal-background'>
-            <button onClick= {() => setShowModal(false)} >Close</button>
+            <div className='modal-container'>
+                <button onClick= {() => setShowModal(false)} >Close</button>
+            </div>
         </div>
     );
 }
