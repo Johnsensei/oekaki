@@ -83,6 +83,7 @@ function Main() {
     
     <div className='main-container'>
 
+      {/* Share Modal */}
       {showModal && <ShareModal setShowModal={setShowModal}/>}
 
         {/* Draw Pad */}

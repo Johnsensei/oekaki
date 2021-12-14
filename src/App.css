@@ -180,6 +180,18 @@
   padding: 25px;
 }
 
+.close-button {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.close-button button {
+  background-color: transparent;
+  border: none;
+  font-size: 25px;
+  cursor: pointer;
+}
+
 /* For modern phone portrait */
 @media only screen and (max-width: 639px) {
   .header-logo {
@@ -257,6 +269,10 @@
     margin-bottom: 10vh;
   }
 
+  .modal-background {
+    height: 120vh;
+  }
+
 }
 
 /* For phone landscape view */
@@ -301,13 +317,6 @@
 
   .download-button {
     width: 64px;
-  }
-}
-
-/* To correct modal background height problem on all phones in portrait */
-@media only screen and (max-width: 430px){
-  .modal-background {
-    height: 120vh;
   }
 }
 
