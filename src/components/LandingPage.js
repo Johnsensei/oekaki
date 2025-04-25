@@ -121,7 +121,7 @@ function LandingPage(){
                         </p>
                         {/* Social Icon Container */}
                         <div style={{display: 'flex', flexDirection:'row', justifyContent:'space-evenly'}}>
-                            <a href='https://www.johngale.dev/' target='_blank' rel="noreferrer"
+                            <a href='https://www.johnsensei.com/' target='_blank' rel="noreferrer"
                             // style={{margin: '10px'}}
                             >
                                 <FontAwesomeIcon
@@ -151,8 +151,8 @@ function LandingPage(){
                                 
                                 />
                             </a>
-                            <a href='https://twitter.com/MrJohnSensei' target='_blank' rel="noreferrer"
-                            // style={{margin: '10px'}}
+                            {/* <a href='https://twitter.com/MrJohnSensei' target='_blank' rel="noreferrer"
+                            
                             >
                                 <FontAwesomeIcon
                                 icon={faTwitterSquare}
@@ -160,7 +160,7 @@ function LandingPage(){
                                 inverse
                                 
                                 />
-                            </a>
+                            </a> */}
                         </div>
                     </div>
                     <div className='profile-card'>
